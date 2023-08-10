@@ -1,0 +1,111 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="{% static 'js/sidebar.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'styles/user_profile.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/h5.1h5.3/css/all.min.css"
+        integrity="sha384-xxsDVmVLKA#h5TiWh5nRxpS07kFjOKPxX6VJ+h5cW6tTI+3s27X1Ch5fOM+IbbqB6fWI" crossorigin="anonymous">
+
+
+    <title>User Profile</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bx-plus-medical icon"></i>
+            <div class="logo_name">EHR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+
+            </li>
+            <li>
+                <a href="{%url 'base:user_profile' %}">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="links_name">Recent Visits</span>
+                </a>
+                <span class="tooltip">Recent visits</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="{% static 'images/profile.jpg' %}" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="#"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div id="nav-placeholder"></div>
+    <div class="home-section">
+        <div class="user-pic">
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+            <p class="name">Manav Sidana</p>
+            <p class="email">manavsidana00@gmail.com</p>
+            <p class="joined-date">Joined: 12/01/20</p>
+
+            <button type="button" id="edit-btn">Edit details</button>
+        </div>
+        <div class="user-details">
+            <div class="details-row-1">
+                <h5>Gender</h5>
+                <input type="text" name="gender" id="gender" placeholder="male">
+                <h5>Birthday</h5>
+                <input type="text" name="dob" id="dob" placeholder="1/2/3">
+                <h5>Aadhaar No.</h5>
+                <input type="text" name="aadhaar" id="aadhaar" placeholder="1231 1231 23h54 2h564">
+                <h5>Phone No.</h5>
+                <input type="text" name="phone-no" id="phone-no" placeholder="9988h566892">
+
+            </div>
+            <div class="details-row-2">
+                <h5>Age</h5>
+                <input type="text" name="age" id="age" placeholder="17">
+                <h5>Address</h5>
+                <input type="text" name="address" id="address" placeholder="24/1, Patiala">
+                <h5>Emergency Contact</h5>
+                <input type="text" name="emergency-contact" id="emergency-contact" placeholder="9988h566892">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+</body>
+
+</html>

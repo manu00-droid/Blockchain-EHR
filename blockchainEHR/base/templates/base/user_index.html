@@ -1,0 +1,141 @@
+{%load static%}
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Electronic Health Records</title>
+    <link rel="stylesheet" href="{% static 'styles/user_frontend.css' %}">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-xxsDVmVLKA#5TiW5nRxpS07kFjOKPxX6VJ+5cW6tTI+3s27X1C5fOM+IbbqB6fWI" crossorigin="anonymous">
+
+    <script src="{% static 'js/user_frontend.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bx-plus-medical icon"></i>
+            <div class="logo_name">EHR</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+
+            </li>
+            <li>
+                <a href="{%url 'base:user_profile' %}">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="links_name">Recent Visits</span>
+                </a>
+                <span class="tooltip">Recent visits</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="{% static 'images/profile.jpg' %}" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Prem Shahi</div>
+                        <div class="job">Web designer</div>
+                    </div>
+                </div>
+                <a href="#"><i class='bx bx-log-out' id="log_out"></i></a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="dashboard-container">
+            <div class="text">Dashboard</div>
+            <div class="current_date" id="current_date"></div>
+            <div class="user_icon">
+                <a href="#">user_icon</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="first-row">
+                <div class="personal-card">
+                    <div class="user-img">
+                        <img src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg"
+                            class="card-img-top" alt="...">
+                        <h5>Manav Sidana</h5>
+                        <p class="user-email">manavsidana50@gmail.com</p>
+                    </div>
+                    <div class="vertical-line">
+                        <hr width="1" size="500" style=" margin:0 auto;" />
+                    </div>
+                    <div class="user-info">
+                        <div class="user-info1">
+                            <h6 class="user-gender">Gender</h6>
+                            <p class="user-gender"></p>
+                            <h6 class="user-phone">Phone Number</h6>
+                            <p class="user-phone"></p>
+                            <h6 class="user-city">City</h6>
+                            <p class="user-city"></p>
+                            <h6 class="user-registration-date">Registration Date</h6>
+                            <p class="user-registration-date"></p>
+                        </div>
+                        <div class="user-info2">
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-visits-card">
+                    <div class="visit-header">
+                        <p>Recent Visits</p>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="visit-body">
+                        doctor name
+                        date
+                        description
+                        pres
+                        status
+                    </div>
+                </div>
+                <div class="files-card">
+                    <div class="files-header">
+                        <p>Files / Documents</p>
+                        <a href="#">View All</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="second-row">
+                <div class="doctors-card">
+
+                </div>
+                <div class="user-diseases-card">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

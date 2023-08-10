@@ -1,0 +1,48 @@
+<!-- Start Landing Page -->
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHR</title>
+    <link rel="stylesheet" href="{% static 'styles/landing_style.css' %}">
+</head>
+
+<body>
+
+    <div class="landing-page">
+        <header>
+            <div class="container">
+                <a href="#" class="logo"><b>EHR</b></a>
+                <ul class="links">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li><a href="{% url 'base:login'%}">Login</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="info">
+                    <h1>We are here for your help !!</h1>
+                    <p>At EHR, we believe that true wealth is health.Our comprehensive health and wellness
+                        resources are designed to empower you on your journey towards a vibrant and fulfilling life.
+                        Whether you're just starting or well along the path to wellness, we're here to support, educate,
+                        and inspire you every step of the way.</p>
+
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/hospital_landing.png'%}">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- End Landing Page -->
